@@ -17,7 +17,7 @@ class ProductsTest < ApplicationSystemTestCase
     fill_in "Description", with: @product.description
     fill_in "Price", with: @product.price
     fill_in "Title", with: "unique test title"
-    attach_file("product_image", File.absolute_path(:"./test/fixtures/files/lorem.jpg"))
+    attach_file("product_image", File.absolute_path("./test/fixtures/files/lorem.jpg"))
     click_on "Create Product"
 
     assert_text "Product was successfully created"
